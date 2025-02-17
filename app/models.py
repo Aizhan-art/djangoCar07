@@ -38,3 +38,14 @@ class Car(models.Model):
         verbose_name_plural = "Машины"
 
 
+class News(models.Model):
+    title = models.CharField(max_length=123)
+    description = models.TextField()
+    created_date = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        verbose_name = "Новость"
+        verbose_name_plural = "Новости"
