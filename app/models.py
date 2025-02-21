@@ -25,6 +25,7 @@ class Car(models.Model):
     title = models.CharField(max_length=123)
     model = models.CharField(max_length=223)
     description = models.TextField()
+    price = models.DecimalField(max_digits=10, decimal_places=2)
     year = models.PositiveSmallIntegerField()
     engine_capacity = models.DecimalField(max_digits=3, decimal_places=1)
     odometer = models.PositiveIntegerField()
